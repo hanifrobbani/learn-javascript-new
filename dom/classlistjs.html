@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titit{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh penggunaan classlist</h1>
+
+    <button class="biru">KONTOL</button>
+
+    <script>
+        const kontol = document.body
+        const btn = document.querySelector('.biru');
+
+        btn.onclick = function(){
+            kontol.classList.toggle('titit');
+        }
+    </script>
+</body>
+</html>

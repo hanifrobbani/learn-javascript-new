@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Gaya default tombol */
+    #myButton {
+      background-color: #3498db;
+      color: #ffffff;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+
+    /* Gaya tombol saat di-hover (opsional) */
+    #myButton:hover {
+      background-color: #2980b9;
+    }
+  </style>
+  <title>Change Background Color</title>
+</head>
+<body>
+
+<button id="myButton">Change Background Color</button>
+
+<script>
+  const myButton = document.getElementById('myButton');
+
+  let isBackgroundChanged = false;
+
+  // Menangani klik pada tombol
+  myButton.addEventListener('click', function () {
+    if (isBackgroundChanged ) {
+      // Jika latar belakang sudah diubah, kembalikan ke warna default
+      myButton.style.backgroundColor = '#3498db';
+    } else {
+      // Jika latar belakang belum diubah, ubah ke warna lain
+      myButton.style.backgroundColor = '#e74c3c';
+    }
+
+    // Ubah status flag
+    isBackgroundChanged = !isBackgroundChanged;
+  });
+</script>
+
+</body>
+</html>

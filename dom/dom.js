@@ -1,6 +1,6 @@
 console.log(document.title);
 
-document.title = "Naon ai sia?";
+document.title = "Halo apa kabar?";
 const body = document.body;
 
 // isi bagain body dengan append
@@ -34,7 +34,7 @@ btn2.style.cursor = "pointer";
 
 function gantiBtn() {
   const Nama = document.createElement("p");
-  Nama.innerHTML = "<marquee>Muka lu Kek Kontol</marquee>";
+  Nama.innerHTML = "<marquee>Muka lu ganteng</marquee>";
   body.append(Nama)
 
 }
@@ -48,7 +48,7 @@ function ubahSemula(){
 
 function munculTeks(){
     const teks = document.createElement("b");
-    teks.innerHTML = 'Lu Bego</br>' 
+    teks.innerHTML = 'Hai ganteng</br>' 
     teks.style.color = 'black'
     body.append(teks)
 }

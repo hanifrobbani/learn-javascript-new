@@ -1,11 +1,11 @@
  // setTimeout(() => {
-        //     console.log("halah kontol")
+        //     console.log("hello1")
         // }, 2000);
         // setTimeout(() => {
-        //     console.log("halah memek");
+        //     console.log("hello2");
         // }, 3000);
         // setTimeout(() => {
-        //     console.log("halah jembud")
+        //     console.log("hello3")
         // }, 2000);
 
         // function greeting(name) {
@@ -98,40 +98,33 @@
 
         // console.log(tesAsyncAwait(true))
 
-        // Fungsi untuk mengambil data pengguna
-        // function ambilDataUser() {
-        //     fetch("https://api.jikan.moe/v4/anime?q=Naruto")
-        //         .then(function (response) {
-        //             // response adalah objek Response yang dihasilkan oleh fetch
-        //             // console.log(response); // Mencetak objek Response ke konsol
-        //             return response.json(); // Mengonversi respons ke JSON
-        //         })
-        //         .then(function (users) {
-        //             // users adalah data JSON yang dihasilkan dari response.json()
-        //             console.log(users); // Menampilkan data JSON ke konsol
-        //         })
-        //         .catch(function (error) {
-        //             // Menangani error jika terjadi
-        //             console.error('There has been a problem with your fetch operation:', error);
-        //         });
-        // }
-
-        // // Memanggil fungsi untuk mengambil data pengguna
-        // ambilDataUser();
-
-        async function fetchAnimeInfo() {
-            try {
-                const response = await fetch('https://api.jikan.moe/v4/anime');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                console.log(data);
-            } catch (error) {
-                console.error('There has been a problem with your fetch operation:', error);
-            }
+        //Fungsi untuk mengambil data pengguna
+        function ambilDataUser() {
+            fetch("https://api.jikan.moe/v4/characters?q=Sasuke")
+                .then(response => response.json())
+                .then(({ data }) => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
         }
         
-        fetchAnimeInfo();
+        ambilDataUser();
+
+        // async function fetchAnimeInfo() {
+        //     try {
+        //         const response = await fetch('https://api.jikan.moe/v4/anime');
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //         const data = await response.json();
+        //         console.log(data);
+        //     } catch (error) {
+        //         console.error('There has been a problem with your fetch operation:', error);
+        //     }
+        // }
+        
+        // fetchAnimeInfo();
         
         

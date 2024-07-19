@@ -16,10 +16,10 @@
 
 function ambilDataUser(){
     fetch("https://jsonplaceholder.typicode.com/users")
-    .then(function (response){
-        return response.json()
+    .then(response => {
+       return response.json()
     })
-    .then(function (users){
+    .then(users => {
         console.log(users)
     })
 }

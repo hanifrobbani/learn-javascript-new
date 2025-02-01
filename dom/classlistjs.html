@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titit{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh penggunaan classlist</h1>
+
+    <button class="biru">Contoh ClassList</button>
+
+    <script>
+        const body = document.body
+        const btn = document.querySelector('.biru');
+
+        btn.onclick = function(){
+            body.classList.toggle('toogle');
+        }
+    </script>
+</body>
+</html>

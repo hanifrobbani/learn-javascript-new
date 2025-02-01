@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maenkeun Warna</title>
+    <style>
+        body {
+            transition: background-color .2s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Warna dengan JS</h1>
+    <button id="btn1">Tombol 1</button>
+    <button id="btn2">Tombol 2</button>
+    <button id="btn3">Tombol 3</button>
+
+    <button id="acak">Acak warna</button>
+    <input type="range" min="0" max="255" value="0" id="rangewarna">
+
+    <script>
+        const body = document.body;
+        const btn1 = document.querySelector('#btn1');
+        const btn2 = document.querySelector('#btn2');
+        const btn3 = document.querySelector('#btn3');
+
+        function ubahWarna(warna) {
+            if (body.style.backgroundColor === warna) {
+                body.style.backgroundColor = '';
+            } else {
+                body.style.backgroundColor = warna;
+            }
+        }
+
+        btn1.addEventListener('click', function(){
+            ubahWarna('lime');
+        }) 
+        btn2.addEventListener('click', function(){
+            ubahWarna('tomato');
+        }) 
+        btn3.addEventListener('click', function(){
+            ubahWarna('skyblue');
+        }) 
+
+     /*Cara 2
+        btn1.onclick = function() {
+            ubahwarna('lime');
+        }
+        btn2.onclick = function() {
+            ubahwarna('lime');
+        }
+
+     */
+    
+     const acakWarna = document.querySelector('#acak');
+
+     acakWarna.addEventListener('click', function(){
+        const red = Math.round(Math.random() * 255 + 1);
+        const green = Math.round(Math.random() * 255 + 1);
+        const blue = Math.round(Math.random() * 255 + 1);
+
+        body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+     }
+    );
+     const range = document.getElementById('rangewarna');
+     
+     range.addEventListener('input', function(){
+        const red = Math.round(Math.random() * 255 + 1);
+        const green = Math.round(Math.random() * 255 + 1);
+        const blue = Math.round(Math.random() * 255 + 1);
+
+        body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+     }
+    );
+    
+     
+    </script>
+</body>
+
+</html>

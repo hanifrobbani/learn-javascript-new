@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Suit</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        .container{
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        .img{
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border: 2px solid transparent;
+            transition: .1s linear;
+        }
+        .img:hover{
+            cursor: pointer;
+            scale: .9;
+            border: 2px solid black;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Game Suit</h1>
+<div class="container">
+    <img src="img/Suit_batu.png" class="img" id="batu">
+    <img src="img/Suit_gunting.png" class="img" id="gunting">
+    <img src="img/Suit_kertas.png" class="img" id="kertas">
+</div>
+    
+    <script>
+        const playerBatu = document.getElementById('batu');
+        const playerGunting = document.getElementById('gunting');
+        const playerKertas = document.getElementById('kertas');
+
+        let com = Math.random();
+        let comchoice;
+        let hasil;
+
+        if (com < 0.34) {
+            comchoice = 'GUNTING';
+        } else if (com > 0.34 && com < 0.66) {
+            comchoice = 'BATU';
+        } else {    
+            comchoice = 'KERTAS';
+        }
+
+        function showAlertAndReload() {
+            alert(hasil);
+            location.reload();
+        }
+
+        playerBatu.addEventListener('click',() => {
+            if (comchoice === 'BATU') {
+                hasil = `Komputer Memilih ${comchoice} Seri`;
+            } else if (comchoice === 'GUNTING') {
+                hasil = `Komputer Memilih ${comchoice} Kamu Menang`;
+            } else {
+                hasil = `Komputer Memilih ${comchoice} Kamu kalah`;
+            }
+            showAlertAndReload();
+        })
+        playerGunting.addEventListener('click',() => {
+            if (comchoice === 'GUNTING') {
+                hasil = `Komputer Memilih ${comchoice} Seri`;
+            } else if (comchoice === 'KERTAS') {
+                hasil = `Komputer Memilih ${comchoice} Kamu Menang`;
+            } else {
+                hasil = `Komputer Memilih ${comchoice} Kamu Kalah`;;
+            }
+            showAlertAndReload();
+        })
+        playerKertas.addEventListener('click',() => {
+            if (comchoice === 'KERTAS') {
+                hasil = `Komputer Memilih ${comchoice} Seri`;
+            } else if (comchoice === 'BATU') {
+                hasil = `Komputer Memilih ${comchoice} Kamu Menang`;
+            } else {
+                hasil = `Komputer Memilih ${comchoice} Kamu Kalah`;
+            }
+            showAlertAndReload();
+        })
+
+
+    </script>
+</body>
+
+</html>

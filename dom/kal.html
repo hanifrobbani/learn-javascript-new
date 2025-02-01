@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+        }
+        .button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <label for="bil1">Masukan bil 1: </label>
+            <input type="text" id="bil1">
+            <label for="bil1">Masukan bil 2: </label>
+            <input type="text" id="bil2">
+            <div class="button">
+                <button onclick="tambah()">+</button>
+                <button onclick="kurang()">-</button>
+                <button onclick="kali()">x</button>
+                <button onclick="bagi()">/</button>
+                <button onclick="cleara()">C</button>
+            </div>
+            <label for="hasil">Hasil: </label>
+            <input type="text" id="hasil" readonly>
+            <!-- <p id="hasil"></p> -->
+        </div>
+    </div>
+    <script src="kal.js"></script>
+</body>
+
+</html>

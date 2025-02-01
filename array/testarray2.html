@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const listArray = [[1, 2, 3], [4, 5, 6]];
+
+        for (let i = 0; i < listArray.length; i++) {
+            console.log(listArray[i])
+        }
+
+        const orang = {
+            Nama: {
+                laki: 'Hanif',
+                cewe: 'saha we'
+            },
+            Umur: 16,
+            alamat: {
+                laki: 'indo',
+                cewe: 'indo'
+            }
+        };
+
+        for (let yahaha in orang) {
+            console.log(yahaha, orang[yahaha]);
+        }
+
+        let angka = [1, 46, 75, 12, 89, 54, 101];
+        let genap = [];
+
+        for (let i = 0; i < angka.length; i++) {
+            if (angka[i] % 2 === 0) {
+                genap.push(angka[i]);
+            }
+        }
+        console.log(genap);
+
+        let angka1 = [1, 46, 75, 12, 89, 54, 101];
+        let ganjil = [];
+
+        // Tulis kode kalian di bawah ini
+        for (let x of angka1) {
+            if (x % 2 === 1) {
+                ganjil.push(x);
+            }
+        }
+        console.log(ganjil);
+
+        function apa(){
+            return "Hai";
+        }
+
+        console.log(apa());
+
+    </script>
+</body>
+
+</html>

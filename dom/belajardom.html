@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .box{
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Isi data diri</h1>
+            <label for="nama">Nama: </label>
+            <input type="text" name="nama" id="nama">
+            <label for="nama">Domisili:</label>
+            <input type="text" name="domisili" id="domisili">
+
+            <button onclick="tampilData()">Submit Data</button>
+
+            <h1 id="tampil"></h1>
+        </div>
+
+    </div>
+
+    <script src="belajardom.js"></script>
+</body>
+
+</html>

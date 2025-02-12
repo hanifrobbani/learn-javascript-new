@@ -31,6 +31,5 @@ const dataArray = [
   
   //userProfile.skills.forEach((data) => console.log(data))
   console.log(userProfile.age)
-  console.log(userProfile.name)
 
 
